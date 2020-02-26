@@ -44,7 +44,7 @@ class ChordResolveTest {
     fun resolveEMinorChord() {
         val notes = listOf(E, G, B)
         val chord = ChordResolver().resolve(notes)
-        assertMajor(chord, E)
+        assertMinor(chord, E)
     }
 
     @Test
@@ -55,10 +55,52 @@ class ChordResolveTest {
     }
 
     @Test
+    fun resolveFMinorChord() {
+        val notes = listOf(F, G_SHARP, C)
+        val chord = ChordResolver().resolve(notes)
+        assertMinor(chord, F)
+    }
+
+    @Test
     fun resolveGMajorChord() {
         val notes = listOf(G, B, D)
         val chord = ChordResolver().resolve(notes)
+        assertMajor(chord, G)
+    }
+
+    @Test
+    fun resolveGMinorChord() {
+        val notes = listOf(G, A_SHARP, D)
+        val chord = ChordResolver().resolve(notes)
         assertMinor(chord, G)
+    }
+
+    @Test
+    fun resolveAMajorChord() {
+        val notes = listOf(A, C_SHARP, E)
+        val chord = ChordResolver().resolve(notes)
+        assertMajor(chord, A)
+    }
+
+    @Test
+    fun resolveAMinorChord() {
+        val notes = listOf(A, C, E)
+        val chord = ChordResolver().resolve(notes)
+        assertMinor(chord, A)
+    }
+
+    @Test
+    fun resolveBMajorChord() {
+        val notes = listOf(B, D_SHARP, F_SHARP)
+        val chord = ChordResolver().resolve(notes)
+        assertMajor(chord, B)
+    }
+
+    @Test
+    fun resolveBMinorChord() {
+        val notes = listOf(B, D, F_SHARP)
+        val chord = ChordResolver().resolve(notes)
+        assertMinor(chord, B)
     }
 
     private fun assertMajor(chord: Chord, expectedKey: Note) {

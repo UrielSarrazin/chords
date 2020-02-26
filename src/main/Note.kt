@@ -5,10 +5,10 @@ enum class Note(val semitonOffset: Int) {
     D_SHARP(3), E_FLAT(3),
     E(4),
     F(5),
-    F_SHARP(6), G_FLAT(7),
-    G(8),
-    G_SHARP(9), A_FLAT(9),
-    A(10),
-    A_SHARP(11), B_FLAT(11),
-    B(12)
+    F_SHARP(6), G_FLAT(6),
+    G(7),
+    G_SHARP(8), A_FLAT(8),
+    A(9),
+    A_SHARP(10), B_FLAT(10),
+    B(11)
 }

@@ -2,9 +2,22 @@ import Quality.MAJOR
 import Quality.MINOR
 
 class ChordResolver {
-    fun resolve(notes: List<Note>) : Chord {
+    fun resolve(notes: List<Note>): Chord {
+        val key = notes[0]
+        val quality = quality(notes)
+        return Chord(key, quality)
+    }
+
+    private fun quality(notes: List<Note>): Quality {
+        return when (calculateInterval(notes)) {
+            3 -> MINOR
+            4 -> MAJOR
+            else -> throw Exception("Impossible to determine quality")
+        }
+    }
+
+    private fun calculateInterval(notes: List<Note>): Int {
         val distance = notes[1].semitonOffset - notes[0].semitonOffset
-        val quality = if(distance == 3) MINOR else MAJOR
-        return Chord(notes[0], quality)
+        return if (distance < 0) distance + 12 else distance
     }
 }
