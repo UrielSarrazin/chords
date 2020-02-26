@@ -17,4 +17,12 @@ class ChordResolveTest {
         assertTrue { chord.key == "D" }
         assertTrue { chord.quality == "major" }
     }
+
+    @Test
+    fun resolveEMajorChord() {
+        val notes = listOf("E", "G#", "B")
+        val chord = ChordResolver().resolve(notes)
+        assertTrue { chord.key == "E" }
+        assertTrue { chord.quality == "major" }
+    }
 }
