@@ -112,6 +112,14 @@ class ChordResolveTest {
         }
     }
 
+    @Test
+    fun minorWithoutPerfectFifthChordThrowException() {
+        val notes = listOf(C, E, G_SHARP)
+        assertFailsWith(Exception::class) {
+            ChordResolver().resolve(notes)
+        }
+    }
+
     private fun assertMajor(chord: Chord, expectedKey: Note) {
         assertTrue(chord, expectedKey, MAJOR)
     }
