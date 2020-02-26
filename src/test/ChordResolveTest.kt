@@ -7,23 +7,25 @@ class ChordResolveTest {
     fun resolveCMajorChord() {
         val notes = listOf(C, E, G)
         val chord = ChordResolver().resolve(notes)
-        assertTrue { chord.key == C }
-        assertTrue { chord.quality == "major" }
+        assertTrue(chord, C)
     }
 
     @Test
     fun resolveDMajorChord() {
         val notes = listOf(D, F_SHARP, A)
         val chord = ChordResolver().resolve(notes)
-        assertTrue { chord.key == D }
-        assertTrue { chord.quality == "major" }
+        assertTrue(chord, D)
     }
 
     @Test
     fun resolveEMajorChord() {
         val notes = listOf(E, G_SHARP, B)
         val chord = ChordResolver().resolve(notes)
-        assertTrue { chord.key == E }
+        assertTrue(chord, E)
+    }
+
+    private fun assertTrue(chord: Chord, expectedKey: Note) {
+        assertTrue { chord.key == expectedKey }
         assertTrue { chord.quality == "major" }
     }
 }
