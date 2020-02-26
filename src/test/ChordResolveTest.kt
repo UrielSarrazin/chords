@@ -2,6 +2,7 @@ import Note.*
 import Quality.MAJOR
 import Quality.MINOR
 import kotlin.test.Test
+import kotlin.test.assertFailsWith
 import kotlin.test.assertTrue
 
 class ChordResolveTest {
@@ -101,6 +102,14 @@ class ChordResolveTest {
         val notes = listOf(B, D, F_SHARP)
         val chord = ChordResolver().resolve(notes)
         assertMinor(chord, B)
+    }
+
+    @Test
+    fun neitherMinorNorMajorChordThrowException() {
+        val notes = listOf(A, B, C)
+        assertFailsWith(UnknownQualityException::class) {
+            ChordResolver().resolve(notes)
+        }
     }
 
     private fun assertMajor(chord: Chord, expectedKey: Note) {

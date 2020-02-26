@@ -1,0 +1,1 @@
+class UnknownQualityException : Throwable()

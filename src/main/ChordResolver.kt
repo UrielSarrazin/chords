@@ -13,7 +13,7 @@ class ChordResolver {
         return when (calculateInterval(notes)) {
             MINOR_THIRD.semitones -> MINOR
             MAJOR_THIRD.semitones -> MAJOR
-            else -> throw Exception("Impossible to determine quality")
+            else -> throw UnknownQualityException()
         }
     }
 
