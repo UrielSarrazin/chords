@@ -1,1 +1,1 @@
-class Chord(val key: String = "C", val quality: String = "major")
+class Chord(val key: String, val quality: String = "major")
