@@ -1,4 +1,6 @@
 import Note.*
+import Quality.MAJOR
+import Quality.MINOR
 import kotlin.test.Test
 import kotlin.test.assertTrue
 
@@ -45,15 +47,29 @@ class ChordResolveTest {
         assertMajor(chord, E)
     }
 
+    @Test
+    fun resolveFMajorChord() {
+        val notes = listOf(F, A, C)
+        val chord = ChordResolver().resolve(notes)
+        assertMajor(chord, F)
+    }
+
+    @Test
+    fun resolveGMajorChord() {
+        val notes = listOf(G, B, D)
+        val chord = ChordResolver().resolve(notes)
+        assertMinor(chord, G)
+    }
+
     private fun assertMajor(chord: Chord, expectedKey: Note) {
-        assertTrue(chord, expectedKey, "major")
+        assertTrue(chord, expectedKey, MAJOR)
     }
 
     private fun assertMinor(chord: Chord, expectedKey: Note) {
-        assertTrue(chord, expectedKey, "minor")
+        assertTrue(chord, expectedKey, MINOR)
     }
 
-    private fun assertTrue(chord: Chord, expectedKey: Note, expectedQuality: String) {
+    private fun assertTrue(chord: Chord, expectedKey: Note, expectedQuality: Quality) {
         assertTrue { chord.key == expectedKey }
         assertTrue { chord.quality == expectedQuality }
     }

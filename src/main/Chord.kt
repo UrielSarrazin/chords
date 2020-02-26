@@ -1,1 +1,1 @@
-class Chord(val key: Note, val quality: String)
+class Chord(val key: Note, val quality: Quality)
