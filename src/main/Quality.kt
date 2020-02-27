@@ -1,4 +1,5 @@
 import Constants.Interval.MAJOR_THIRD
+import Constants.Interval.MINOR_SEVENTH
 import Constants.Interval.MINOR_THIRD
 import Constants.Interval.PERFECT_FIFTH
 import Constants.Interval.UNISON
@@ -13,5 +14,11 @@ enum class Quality(val intervals: List<Int>) {
             UNISON,
             MINOR_THIRD,
             PERFECT_FIFTH
-    ));
+    )),
+    DOMINANT_SEVENTH(listOf(
+            UNISON,
+            MAJOR_THIRD,
+            PERFECT_FIFTH,
+            MINOR_SEVENTH
+    ))
 }
