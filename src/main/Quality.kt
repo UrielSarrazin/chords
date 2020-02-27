@@ -1,30 +1,34 @@
-enum class Quality(val intervals: List<Int>) {
+enum class Quality(val intervals: List<Interval>) {
     MAJOR(listOf(
-            Constants.UNISON,
-            Constants.MAJOR_THIRD,
-            Constants.PERFECT_FIFTH
+            Interval.UNISON,
+            Interval.MAJOR_THIRD,
+            Interval.PERFECT_FIFTH
     )),
     MINOR(listOf(
-            Constants.UNISON,
-            Constants.MINOR_THIRD,
-            Constants.PERFECT_FIFTH
+            Interval.UNISON,
+            Interval.MINOR_THIRD,
+            Interval.PERFECT_FIFTH
     )),
     MAJOR_SEVENTH(listOf(
-            Constants.UNISON,
-            Constants.MAJOR_THIRD,
-            Constants.PERFECT_FIFTH,
-            Constants.MAJOR_SEVENTH
+            Interval.UNISON,
+            Interval.MAJOR_THIRD,
+            Interval.PERFECT_FIFTH,
+            Interval.MAJOR_SEVENTH
     )),
     MINOR_SEVENTH(listOf(
-            Constants.UNISON,
-            Constants.MINOR_THIRD,
-            Constants.PERFECT_FIFTH,
-            Constants.MINOR_SEVENTH
+            Interval.UNISON,
+            Interval.MINOR_THIRD,
+            Interval.PERFECT_FIFTH,
+            Interval.MINOR_SEVENTH
     )),
     DOMINANT_SEVENTH(listOf(
-            Constants.UNISON,
-            Constants.MAJOR_THIRD,
-            Constants.PERFECT_FIFTH,
-            Constants.MINOR_SEVENTH
+            Interval.UNISON,
+            Interval.MAJOR_THIRD,
+            Interval.PERFECT_FIFTH,
+            Interval.MINOR_SEVENTH
     ))
+}
+
+fun byIntervals(intervals: List<Interval>): Quality {
+    return Quality.values().find { it.intervals == intervals } ?: throw UnknownIntervalException()
 }

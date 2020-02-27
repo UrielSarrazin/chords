@@ -6,7 +6,7 @@ class UnknownChordsTest {
     @Test
     fun unknownChordThrowException() {
         val notes = listOf(A, B, C)
-        assertFailsWith(UnknownChordException::class) {
+        assertFailsWith(UnknownIntervalException::class) {
             ChordResolver().resolve(notes)
         }
     }
