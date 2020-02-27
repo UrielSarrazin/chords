@@ -1,24 +1,24 @@
-import Constants.Interval.MAJOR_THIRD
-import Constants.Interval.MINOR_SEVENTH
-import Constants.Interval.MINOR_THIRD
-import Constants.Interval.PERFECT_FIFTH
-import Constants.Interval.UNISON
-
 enum class Quality(val intervals: List<Int>) {
     MAJOR(listOf(
-            UNISON,
-            MAJOR_THIRD,
-            PERFECT_FIFTH
+            Constants.UNISON,
+            Constants.MAJOR_THIRD,
+            Constants.PERFECT_FIFTH
     )),
     MINOR(listOf(
-            UNISON,
-            MINOR_THIRD,
-            PERFECT_FIFTH
+            Constants.UNISON,
+            Constants.MINOR_THIRD,
+            Constants.PERFECT_FIFTH
+    )),
+    MINOR_SEVENTH(listOf(
+            Constants.UNISON,
+            Constants.MINOR_THIRD,
+            Constants.PERFECT_FIFTH,
+            Constants.MINOR_SEVENTH
     )),
     DOMINANT_SEVENTH(listOf(
-            UNISON,
-            MAJOR_THIRD,
-            PERFECT_FIFTH,
-            MINOR_SEVENTH
+            Constants.UNISON,
+            Constants.MAJOR_THIRD,
+            Constants.PERFECT_FIFTH,
+            Constants.MINOR_SEVENTH
     ))
 }
