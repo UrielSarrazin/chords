@@ -1,32 +1,18 @@
-import Interval.*
-import Quality.MAJOR
-import Quality.MINOR
-import java.lang.Exception
+import Constants.Interval.OCTAVE
+import Constants.Interval.UNISON
+import Quality.values
 
 class ChordResolver {
     fun resolve(notes: List<Note>): Chord {
-        val key = notes[0]
-        val quality = quality(notes)
-        validatePerfectFifth(notes)
-        return Chord(key, quality)
+        val intervals = intervals(notes)
+        val quality = values().find { it.intervals == intervals }
+        return if (quality != null) Chord(notes[0], quality) else throw UnknownChordException()
     }
 
-    private fun quality(notes: List<Note>): Quality {
-        return when (interval(notes[0], notes[1])) {
-            MINOR_THIRD.semitones -> MINOR
-            MAJOR_THIRD.semitones -> MAJOR
-            else -> throw UnknownQualityException()
-        }
-    }
-
-    private fun validatePerfectFifth(notes: List<Note>) {
-        if (interval(notes[0], notes[2]) != PERFECT_FIFTH.semitones) {
-            throw Exception()
-        }
-    }
+    private fun intervals(notes: List<Note>): List<Int> = notes.map { interval(notes[0], it) }.toList()
 
     private fun interval(from: Note, to: Note): Int {
-        val semitones = to.semitonOffset - from.semitonOffset
-        return if (semitones < UNISON.semitones) semitones + OCTAVE.semitones else semitones
+        val semitones = to.offset - from.offset
+        return if (semitones < UNISON) semitones + OCTAVE else semitones
     }
 }

@@ -1,4 +1,4 @@
-enum class Note(val semitonOffset: Int) {
+enum class Note(val offset: Int) {
     C(0),
     C_SHARP(1), D_FLAT(1),
     D(2),

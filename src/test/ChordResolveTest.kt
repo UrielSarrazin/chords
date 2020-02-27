@@ -105,17 +105,9 @@ class ChordResolveTest {
     }
 
     @Test
-    fun neitherMinorNorMajorChordThrowException() {
+    fun unknownChordThrowException() {
         val notes = listOf(A, B, C)
-        assertFailsWith(UnknownQualityException::class) {
-            ChordResolver().resolve(notes)
-        }
-    }
-
-    @Test
-    fun minorWithoutPerfectFifthChordThrowException() {
-        val notes = listOf(C, E, G_SHARP)
-        assertFailsWith(Exception::class) {
+        assertFailsWith(UnknownChordException::class) {
             ChordResolver().resolve(notes)
         }
     }
