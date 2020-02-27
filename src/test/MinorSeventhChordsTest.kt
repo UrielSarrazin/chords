@@ -4,49 +4,49 @@ import kotlin.test.Test
 
 class MinorSeventhChordsTest {
     @Test
-    fun resolveCMinorChord() {
+    fun resolveInkeyOfC() {
         val notes = listOf(C, D_SHARP, G, A_SHARP)
         val chord = ChordResolver().resolve(notes)
         assertMinorSeventh(chord, C)
     }
 
     @Test
-    fun resolveDMinorChord() {
+    fun resolveInkeyOfD() {
         val notes = listOf(D, F, A, C)
         val chord = ChordResolver().resolve(notes)
         assertMinorSeventh(chord, D)
     }
 
     @Test
-    fun resolveEMinorChord() {
+    fun resolveInkeyOfE() {
         val notes = listOf(E, G, B, D)
         val chord = ChordResolver().resolve(notes)
         assertMinorSeventh(chord, E)
     }
 
     @Test
-    fun resolveFMinorChord() {
+    fun resolveInkeyOfF() {
         val notes = listOf(F, G_SHARP, C, D_SHARP)
         val chord = ChordResolver().resolve(notes)
         assertMinorSeventh(chord, F)
     }
 
     @Test
-    fun resolveGMinorChord() {
+    fun resolveInkeyOfG() {
         val notes = listOf(G, A_SHARP, D, F)
         val chord = ChordResolver().resolve(notes)
         assertMinorSeventh(chord, G)
     }
 
     @Test
-    fun resolveAMinorChord() {
+    fun resolveInkeyOfA() {
         val notes = listOf(A, C, E, G)
         val chord = ChordResolver().resolve(notes)
         assertMinorSeventh(chord, A)
     }
 
     @Test
-    fun resolveBMinorChord() {
+    fun resolveInkeyOfB() {
         val notes = listOf(B, D, F_SHARP, A)
         val chord = ChordResolver().resolve(notes)
         assertMinorSeventh(chord, B)

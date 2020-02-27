@@ -4,49 +4,49 @@ import kotlin.test.Test
 
 class DominantSeventhChordsTest {
     @Test
-    fun resolveCDominantSeventhChord() {
+    fun resolveInkeyOfC() {
         val notes = listOf(C, E, G, B_FLAT)
         val chord = ChordResolver().resolve(notes)
         assertDominantSeventh(chord, C)
     }
 
     @Test
-    fun resolveDDominantSeventhChord() {
+    fun resolveInkeyOfD() {
         val notes = listOf(D, F_SHARP, A, C)
         val chord = ChordResolver().resolve(notes)
         assertDominantSeventh(chord, D)
     }
 
     @Test
-    fun resolveEDominantSeventhChord() {
+    fun resolveInkeyOfE() {
         val notes = listOf(E, G_SHARP, B, D)
         val chord = ChordResolver().resolve(notes)
         assertDominantSeventh(chord, E)
     }
 
     @Test
-    fun resolveFDominantSeventhChord() {
+    fun resolveInkeyOfF() {
         val notes = listOf(F, A, C, D_SHARP)
         val chord = ChordResolver().resolve(notes)
         assertDominantSeventh(chord, F)
     }
 
     @Test
-    fun resolveGDominantSeventhChord() {
+    fun resolveInkeyOfG() {
         val notes = listOf(G, B, D, F)
         val chord = ChordResolver().resolve(notes)
         assertDominantSeventh(chord, G)
     }
 
     @Test
-    fun resolveADominantSeventhChord() {
+    fun resolveInkeyOfA() {
         val notes = listOf(A, C_SHARP, E, G)
         val chord = ChordResolver().resolve(notes)
         assertDominantSeventh(chord, A)
     }
 
     @Test
-    fun resolveBDominantSeventhChord() {
+    fun resolveInkeyOfB() {
         val notes = listOf(B, D_SHARP, F_SHARP, A)
         val chord = ChordResolver().resolve(notes)
         assertDominantSeventh(chord, B)

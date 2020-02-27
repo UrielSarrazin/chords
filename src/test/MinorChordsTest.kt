@@ -4,49 +4,49 @@ import kotlin.test.Test
 
 class MinorChordsTest {
     @Test
-    fun resolveCMinorChord() {
+    fun resolveInkeyOfC() {
         val notes = listOf(C, D_SHARP, G)
         val chord = ChordResolver().resolve(notes)
         assertMinor(chord, C)
     }
 
     @Test
-    fun resolveDMinorChord() {
+    fun resolveInkeyOfD() {
         val notes = listOf(D, F, A)
         val chord = ChordResolver().resolve(notes)
         assertMinor(chord, D)
     }
 
     @Test
-    fun resolveEMinorChord() {
+    fun resolveInkeyOfE() {
         val notes = listOf(E, G, B)
         val chord = ChordResolver().resolve(notes)
         assertMinor(chord, E)
     }
 
     @Test
-    fun resolveFMinorChord() {
+    fun resolveInkeyOfF() {
         val notes = listOf(F, G_SHARP, C)
         val chord = ChordResolver().resolve(notes)
         assertMinor(chord, F)
     }
 
     @Test
-    fun resolveGMinorChord() {
+    fun resolveInkeyOfG() {
         val notes = listOf(G, A_SHARP, D)
         val chord = ChordResolver().resolve(notes)
         assertMinor(chord, G)
     }
 
     @Test
-    fun resolveAMinorChord() {
+    fun resolveInkeyOfA() {
         val notes = listOf(A, C, E)
         val chord = ChordResolver().resolve(notes)
         assertMinor(chord, A)
     }
 
     @Test
-    fun resolveBMinorChord() {
+    fun resolveInkeyOfB() {
         val notes = listOf(B, D, F_SHARP)
         val chord = ChordResolver().resolve(notes)
         assertMinor(chord, B)
