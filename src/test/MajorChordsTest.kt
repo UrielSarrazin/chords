@@ -1,6 +1,7 @@
 import Note.*
 import Quality.*
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class MajorChordsTest {
     @Test
@@ -8,6 +9,14 @@ class MajorChordsTest {
         val notes = listOf(C, E, G)
         val chord = ChordResolver().resolve(notes)
         assertMajor(chord, C)
+    }
+
+    @Test
+    fun resolveInkeyOfCFromQuality() {
+        val key = C
+        val quality = MAJOR
+        val notes = ChordResolver().resolve(key, quality)
+        assertEquals(listOf(C, E, G), notes)
     }
 
     @Test

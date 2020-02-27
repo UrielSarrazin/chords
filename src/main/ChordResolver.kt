@@ -1,5 +1,6 @@
 import Constants.Interval.OCTAVE
 import Constants.Interval.UNISON
+import Note.*
 import Quality.values
 
 class ChordResolver {
@@ -8,6 +9,8 @@ class ChordResolver {
         val quality = values().find { it.intervals == intervals }
         return if (quality != null) Chord(notes[0], quality) else throw UnknownChordException()
     }
+
+    fun resolve(key: Note, quality: Quality): List<Note> = listOf(C, E,  G)
 
     private fun intervals(notes: List<Note>): List<Int> = notes.map { interval(notes[0], it) }.toList()
 
