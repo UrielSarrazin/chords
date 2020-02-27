@@ -9,6 +9,12 @@ enum class Quality(val intervals: List<Int>) {
             Constants.MINOR_THIRD,
             Constants.PERFECT_FIFTH
     )),
+    MAJOR_SEVENTH(listOf(
+            Constants.UNISON,
+            Constants.MAJOR_THIRD,
+            Constants.PERFECT_FIFTH,
+            Constants.MAJOR_SEVENTH
+    )),
     MINOR_SEVENTH(listOf(
             Constants.UNISON,
             Constants.MINOR_THIRD,
