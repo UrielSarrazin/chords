@@ -27,6 +27,14 @@ class MajorChordsTest {
     }
 
     @Test
+    fun resolveInkeyOfDFromQuality() {
+        val key = D
+        val quality = MAJOR
+        val notes = ChordResolver().resolve(key, quality)
+        assertEquals(listOf(D, F_SHARP, A), notes)
+    }
+
+    @Test
     fun resolveInkeyOfE() {
         val notes = listOf(E, G_SHARP, B)
         val chord = ChordResolver().resolve(notes)

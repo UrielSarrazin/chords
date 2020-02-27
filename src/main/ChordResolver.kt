@@ -10,7 +10,7 @@ class ChordResolver {
         return if (quality != null) Chord(notes[0], quality) else throw UnknownChordException()
     }
 
-    fun resolve(key: Note, quality: Quality): List<Note> = listOf(C, E,  G)
+    fun resolve(key: Note, quality: Quality): List<Note> = if(key == C) listOf(C, E,  G) else listOf(D, F_SHARP, A)
 
     private fun intervals(notes: List<Note>): List<Int> = notes.map { interval(notes[0], it) }.toList()
 
