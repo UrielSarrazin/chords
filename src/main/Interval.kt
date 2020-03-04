@@ -7,6 +7,7 @@ enum class Interval(val semitones: Int) {
     MAJOR_THIRD(4),
     DIMINISHED_FIFTH(6),
     PERFECT_FIFTH(7),
+    AUGMENTED_FIFTH(8),
     MAJOR_SIXTH(9),
     MINOR_SEVENTH(10),
     MAJOR_SEVENTH(11),

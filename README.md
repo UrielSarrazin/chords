@@ -6,6 +6,7 @@ The qualities of chords already supported are :
 * Major
 * Minor
 * Diminished
+* Augmented
 * Dominant 7th
 * Major 7th
 * Minor 7th
