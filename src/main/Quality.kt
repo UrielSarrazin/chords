@@ -26,6 +26,12 @@ enum class Quality(val intervals: List<Interval>) {
             Interval.MAJOR_THIRD,
             Interval.PERFECT_FIFTH,
             Interval.MINOR_SEVENTH
+    )),
+    MAJOR_SIXTH(listOf(
+            Interval.UNISON,
+            Interval.MAJOR_THIRD,
+            Interval.PERFECT_FIFTH,
+            Interval.MAJOR_SIXTH
     ))
 }
 
