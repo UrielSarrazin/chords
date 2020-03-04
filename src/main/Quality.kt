@@ -9,6 +9,11 @@ enum class Quality(val intervals: List<Interval>) {
             Interval.MINOR_THIRD,
             Interval.PERFECT_FIFTH
     )),
+    DIMINISHED(listOf(
+            Interval.UNISON,
+            Interval.MINOR_THIRD,
+            Interval.DIMINISHED_FIFTH
+    )),
     MAJOR_SEVENTH(listOf(
             Interval.UNISON,
             Interval.MAJOR_THIRD,
