@@ -9,3 +9,4 @@ The qualities of chords already supported are :
 * Major 7th
 * Minor 7th
 * Major 6th
+* Minor 6th
