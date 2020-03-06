@@ -58,6 +58,11 @@ enum class Quality(val intervals: List<Interval>) {
             Interval.MAJOR_SECOND,
             Interval.PERFECT_FIFTH
     )),
+    SUSPENDED_FOURTH(listOf(
+            Interval.UNISON,
+            Interval.PERFECT_FOURTH,
+            Interval.PERFECT_FIFTH
+    ))
 }
 
 fun byIntervals(intervals: List<Interval>): Quality {
