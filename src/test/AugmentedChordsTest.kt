@@ -53,6 +53,6 @@ class AugmentedChordsTest {
     }
 
     private fun assertAugmented(chord: Chord, expectedKey: Note) {
-        assertTrue(chord, expectedKey, AUGMENTED)
+        assertChordEquals(chord, expectedKey, AUGMENTED)
     }
 }

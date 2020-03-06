@@ -53,6 +53,6 @@ class DominantSeventhChordsTest {
     }
 
     private fun assertDominantSeventh(chord: Chord, expectedKey: Note) {
-        assertTrue(chord, expectedKey, DOMINANT_SEVENTH)
+        assertChordEquals(chord, expectedKey, DOMINANT_SEVENTH)
     }
 }

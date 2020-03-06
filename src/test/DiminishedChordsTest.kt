@@ -53,6 +53,6 @@ class DiminishedChordsTest {
     }
 
     private fun assertDiminished(chord: Chord, expectedKey: Note) {
-        assertTrue(chord, expectedKey, DIMINISHED)
+        assertChordEquals(chord, expectedKey, DIMINISHED)
     }
 }

@@ -1,6 +1,5 @@
 import Note.*
 import Quality.FIFTH
-import Quality.MAJOR
 import kotlin.test.Test
 
 class FifthChordsTest {
@@ -54,6 +53,6 @@ class FifthChordsTest {
     }
 
     private fun assertFifth(chord: Chord, expectedKey: Note) {
-        assertTrue(chord, expectedKey, FIFTH)
+        assertChordEquals(chord, expectedKey, FIFTH)
     }
 }

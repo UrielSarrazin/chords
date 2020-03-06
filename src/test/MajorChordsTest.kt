@@ -70,6 +70,6 @@ class MajorChordsTest {
     }
 
     private fun assertMajor(chord: Chord, expectedKey: Note) {
-        assertTrue(chord, expectedKey, MAJOR)
+        assertChordEquals(chord, expectedKey, MAJOR)
     }
 }

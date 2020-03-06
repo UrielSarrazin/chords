@@ -53,6 +53,6 @@ class MinorChordsTest {
     }
 
     private fun assertMinor(chord: Chord, expectedKey: Note) {
-        assertTrue(chord, expectedKey, MINOR)
+        assertChordEquals(chord, expectedKey, MINOR)
     }
 }
