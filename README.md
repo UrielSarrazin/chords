@@ -12,3 +12,4 @@ The qualities of chords already supported are :
 * Minor 7th
 * Major 6th
 * Minor 6th
+* Fifth

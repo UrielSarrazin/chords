@@ -48,6 +48,10 @@ enum class Quality(val intervals: List<Interval>) {
             Interval.MINOR_THIRD,
             Interval.PERFECT_FIFTH,
             Interval.MAJOR_SIXTH
+    )),
+    FIFTH(listOf(
+            Interval.UNISON,
+            Interval.PERFECT_FIFTH
     ))
 }
 
