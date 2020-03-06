@@ -3,6 +3,7 @@ import Interval.UNISON
 
 enum class Interval(val semitones: Int) {
     UNISON(0),
+    MAJOR_SECOND(2),
     MINOR_THIRD(3),
     MAJOR_THIRD(4),
     DIMINISHED_FIFTH(6),

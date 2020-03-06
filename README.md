@@ -13,3 +13,4 @@ The qualities of chords already supported are :
 * Major 6th
 * Minor 6th
 * Fifth
+* Suspended 2nd

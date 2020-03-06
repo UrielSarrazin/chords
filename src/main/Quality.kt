@@ -52,7 +52,12 @@ enum class Quality(val intervals: List<Interval>) {
     FIFTH(listOf(
             Interval.UNISON,
             Interval.PERFECT_FIFTH
-    ))
+    )),
+    SUSPENDED_SECOND(listOf(
+            Interval.UNISON,
+            Interval.MAJOR_SECOND,
+            Interval.PERFECT_FIFTH
+    )),
 }
 
 fun byIntervals(intervals: List<Interval>): Quality {
