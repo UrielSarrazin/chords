@@ -62,9 +62,11 @@ enum class Quality(val intervals: List<Interval>) {
             Interval.UNISON,
             Interval.PERFECT_FOURTH,
             Interval.PERFECT_FIFTH
-    ))
-}
+    ));
 
-fun byIntervals(intervals: List<Interval>): Quality {
-    return Quality.values().find { it.intervals == intervals } ?: throw UnknownIntervalException()
+    companion object {
+        fun from(intervals: List<Interval>): Quality {
+            return values().find { it.intervals == intervals } ?: throw UnknownIntervalException()
+        }
+    }
 }

@@ -10,5 +10,11 @@ enum class Note(val offset: Int) {
     G_SHARP(8), A_FLAT(8),
     A(9),
     A_SHARP(10), B_FLAT(10),
-    B(11)
+    B(11);
+
+    companion object {
+        fun from(note: Note, interval: Interval): Note {
+            return values().find { interval == Interval.from(note, it) } ?: throw UnknownIntervalException()
+        }
+    }
 }
