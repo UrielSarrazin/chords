@@ -1,5 +1,5 @@
 import Note.*
-import kotlin.test.Test
+import org.junit.jupiter.api.Test
 import kotlin.test.assertFailsWith
 
 class UnknownChordsTest {

@@ -1,6 +1,6 @@
 import Note.*
 import Quality.FIFTH
-import kotlin.test.Test
+import org.junit.jupiter.api.Test
 
 class FifthChordsTest {
     @Test

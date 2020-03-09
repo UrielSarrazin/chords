@@ -1,13 +1,13 @@
 import Note.*
 import Quality.*
 import org.junit.jupiter.api.Nested
-import kotlin.test.Test
+import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class MajorChordsTest {
 
     @Nested
-    class MajorChordsFromNotes {
+    inner class MajorChordsFromNotes {
         @Test
         fun resolveInkeyOfC() {
             val notes = listOf(C, E, G)
@@ -63,7 +63,7 @@ class MajorChordsTest {
     }
 
     @Nested
-    class MajorChordsFromKeyAndQuality {
+    inner class MajorChordsFromKeyAndQuality {
         @Test
         fun resolveInkeyOfC() {
             val key = C

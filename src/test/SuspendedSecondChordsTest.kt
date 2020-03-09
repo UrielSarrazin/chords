@@ -1,7 +1,6 @@
 import Note.*
 import Quality.*
-import kotlin.test.Test
-import kotlin.test.assertEquals
+import org.junit.jupiter.api.Test
 
 class SuspendedSecondChordsTest {
     @Test
