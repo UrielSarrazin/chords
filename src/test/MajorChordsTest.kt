@@ -83,5 +83,45 @@ class MajorChordsTest {
             val notes = resolve(key, quality)
             assertEquals(listOf(D, F_SHARP, A), notes)
         }
+
+        @Test
+        fun keyOfE() {
+            val key = E
+            val quality = MAJOR
+            val notes = resolve(key, quality)
+            assertEquals(listOf(E, G_SHARP, B), notes)
+        }
+
+        @Test
+        fun keyOfF() {
+            val key = F
+            val quality = MAJOR
+            val notes = resolve(key, quality)
+            assertEquals(listOf(F, A, C), notes)
+        }
+
+        @Test
+        fun keyOfG() {
+            val key = G
+            val quality = MAJOR
+            val notes = resolve(key, quality)
+            assertEquals(listOf(G, B, D), notes)
+        }
+
+        @Test
+        fun keyOfA() {
+            val key = A
+            val quality = MAJOR
+            val notes = resolve(key, quality)
+            assertEquals(listOf(A, C_SHARP, E), notes)
+        }
+
+        @Test
+        fun keyOfB() {
+            val key = B
+            val quality = MAJOR
+            val notes = resolve(key, quality)
+            assertEquals(listOf(B, D_SHARP, F_SHARP), notes)
+        }
     }
 }
