@@ -1,52 +1,54 @@
 import Note.*
 import Quality.*
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 
+@DisplayName("Major Seventh Chords")
 class MajorSeventhChordsTest {
     @Test
-    fun resolveInkeyOfC() {
+    fun keyOfC() {
         val notes = listOf(C, E, G, B)
         val chord = ChordResolver().resolve(notes)
         assertMajorSeventh(chord, C)
     }
 
     @Test
-    fun resolveInkeyOfD() {
+    fun keyOfD() {
         val notes = listOf(D, F_SHARP, A, C_SHARP)
         val chord = ChordResolver().resolve(notes)
         assertMajorSeventh(chord, D)
     }
 
     @Test
-    fun resolveInkeyOfE() {
+    fun keyOfE() {
         val notes = listOf(E, G_SHARP, B, D_SHARP)
         val chord = ChordResolver().resolve(notes)
         assertMajorSeventh(chord, E)
     }
 
     @Test
-    fun resolveInKeyOfF() {
+    fun keyOfF() {
         val notes = listOf(F, A, C, E)
         val chord = ChordResolver().resolve(notes)
         assertMajorSeventh(chord, F)
     }
 
     @Test
-    fun resolveInKeyOfG() {
+    fun keyOfG() {
         val notes = listOf(G, B, D, F_SHARP)
         val chord = ChordResolver().resolve(notes)
         assertMajorSeventh(chord, G)
     }
 
     @Test
-    fun resolveInKeyOfA() {
+    fun keyOfA() {
         val notes = listOf(A, C_SHARP, E, G_SHARP)
         val chord = ChordResolver().resolve(notes)
         assertMajorSeventh(chord, A)
     }
 
     @Test
-    fun resolveInKeyOfB() {
+    fun keyOfB() {
         val notes = listOf(B, D_SHARP, F_SHARP, A_SHARP)
         val chord = ChordResolver().resolve(notes)
         assertMajorSeventh(chord, B)

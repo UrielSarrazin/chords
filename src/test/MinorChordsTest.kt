@@ -1,52 +1,54 @@
 import Note.*
 import Quality.*
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 
+@DisplayName("Minor Chords")
 class MinorChordsTest {
     @Test
-    fun resolveInkeyOfC() {
+    fun keyOfC() {
         val notes = listOf(C, D_SHARP, G)
         val chord = ChordResolver().resolve(notes)
         assertMinor(chord, C)
     }
 
     @Test
-    fun resolveInkeyOfD() {
+    fun keyOfD() {
         val notes = listOf(D, F, A)
         val chord = ChordResolver().resolve(notes)
         assertMinor(chord, D)
     }
 
     @Test
-    fun resolveInkeyOfE() {
+    fun keyOfE() {
         val notes = listOf(E, G, B)
         val chord = ChordResolver().resolve(notes)
         assertMinor(chord, E)
     }
 
     @Test
-    fun resolveInkeyOfF() {
+    fun keyOfF() {
         val notes = listOf(F, G_SHARP, C)
         val chord = ChordResolver().resolve(notes)
         assertMinor(chord, F)
     }
 
     @Test
-    fun resolveInkeyOfG() {
+    fun keyOfG() {
         val notes = listOf(G, A_SHARP, D)
         val chord = ChordResolver().resolve(notes)
         assertMinor(chord, G)
     }
 
     @Test
-    fun resolveInkeyOfA() {
+    fun keyOfA() {
         val notes = listOf(A, C, E)
         val chord = ChordResolver().resolve(notes)
         assertMinor(chord, A)
     }
 
     @Test
-    fun resolveInkeyOfB() {
+    fun keyOfB() {
         val notes = listOf(B, D, F_SHARP)
         val chord = ChordResolver().resolve(notes)
         assertMinor(chord, B)

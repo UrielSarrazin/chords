@@ -1,52 +1,54 @@
 import Note.*
 import Quality.*
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 
+@DisplayName("Minor Sixth Chords")
 class MinorSixthChordsTest {
     @Test
-    fun resolveInkeyOfC() {
+    fun keyOfC() {
         val notes = listOf(C, D_SHARP, G, A)
         val chord = ChordResolver().resolve(notes)
         assertMinorSixth(chord, C)
     }
 
     @Test
-    fun resolveInkeyOfD() {
+    fun keyOfD() {
         val notes = listOf(D, F, A, B)
         val chord = ChordResolver().resolve(notes)
         assertMinorSixth(chord, D)
     }
 
     @Test
-    fun resolveInkeyOfE() {
+    fun keyOfE() {
         val notes = listOf(E, G, B, C_SHARP)
         val chord = ChordResolver().resolve(notes)
         assertMinorSixth(chord, E)
     }
 
     @Test
-    fun resolveInKeyOfF() {
+    fun KeyOfF() {
         val notes = listOf(F, G_SHARP, C, D)
         val chord = ChordResolver().resolve(notes)
         assertMinorSixth(chord, F)
     }
 
     @Test
-    fun resolveInKeyOfG() {
+    fun keyOfG() {
         val notes = listOf(G, A_SHARP, D, E)
         val chord = ChordResolver().resolve(notes)
         assertMinorSixth(chord, G)
     }
 
     @Test
-    fun resolveInKeyOfA() {
+    fun keyOfA() {
         val notes = listOf(A, C, E, F_SHARP)
         val chord = ChordResolver().resolve(notes)
         assertMinorSixth(chord, A)
     }
 
     @Test
-    fun resolveInKeyOfB() {
+    fun keyOfB() {
         val notes = listOf(B, D, F_SHARP, G_SHARP)
         val chord = ChordResolver().resolve(notes)
         assertMinorSixth(chord, B)

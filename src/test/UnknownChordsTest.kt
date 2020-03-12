@@ -1,7 +1,9 @@
 import Note.*
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import kotlin.test.assertFailsWith
 
+@DisplayName("Unknown Chords")
 class UnknownChordsTest {
     @Test
     fun unknownChordThrowException() {

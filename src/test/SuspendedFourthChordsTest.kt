@@ -1,52 +1,54 @@
 import Note.*
 import Quality.*
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 
+@DisplayName("Suspended Fourth Chords")
 class SuspendedFourthChordsTest {
     @Test
-    fun resolveInkeyOfC() {
+    fun keyOfC() {
         val notes = listOf(C, F, G)
         val chord = ChordResolver().resolve(notes)
         assertSuspendedFourth(chord, C)
     }
 
     @Test
-    fun resolveInkeyOfD() {
+    fun keyOfD() {
         val notes = listOf(D, G, A)
         val chord = ChordResolver().resolve(notes)
         assertSuspendedFourth(chord, D)
     }
 
     @Test
-    fun resolveInkeyOfE() {
+    fun keyOfE() {
         val notes = listOf(E, A, B)
         val chord = ChordResolver().resolve(notes)
         assertSuspendedFourth(chord, E)
     }
 
     @Test
-    fun resolveInkeyOfF() {
+    fun keyOfF() {
         val notes = listOf(F, A_SHARP, C)
         val chord = ChordResolver().resolve(notes)
         assertSuspendedFourth(chord, F)
     }
 
     @Test
-    fun resolveInkeyOfG() {
+    fun keyOfG() {
         val notes = listOf(G, C, D)
         val chord = ChordResolver().resolve(notes)
         assertSuspendedFourth(chord, G)
     }
 
     @Test
-    fun resolveInkeyOfA() {
+    fun keyOfA() {
         val notes = listOf(A, D, E)
         val chord = ChordResolver().resolve(notes)
         assertSuspendedFourth(chord, A)
     }
 
     @Test
-    fun resolveInkeyOfB() {
+    fun keyOfB() {
         val notes = listOf(B, E, F_SHARP)
         val chord = ChordResolver().resolve(notes)
         assertSuspendedFourth(chord, B)
