@@ -1,57 +1,60 @@
 import Note.*
 import Quality.*
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
+@DisplayName("Major Chords")
 class MajorChordsTest {
 
     @Nested
-    inner class MajorChordsFromNotes {
+    @DisplayName("From notes")
+    inner class FromNotes {
         @Test
-        fun resolveInkeyOfC() {
+        fun keyOfC() {
             val notes = listOf(C, E, G)
             val chord = ChordResolver().resolve(notes)
             assertMajor(chord, C)
         }
 
         @Test
-        fun resolveInkeyOfD() {
+        fun keyOfD() {
             val notes = listOf(D, F_SHARP, A)
             val chord = ChordResolver().resolve(notes)
             assertMajor(chord, D)
         }
 
         @Test
-        fun resolveInkeyOfE() {
+        fun keyOfE() {
             val notes = listOf(E, G_SHARP, B)
             val chord = ChordResolver().resolve(notes)
             assertMajor(chord, E)
         }
 
         @Test
-        fun resolveInkeyOfF() {
+        fun keyOfF() {
             val notes = listOf(F, A, C)
             val chord = ChordResolver().resolve(notes)
             assertMajor(chord, F)
         }
 
         @Test
-        fun resolveInkeyOfG() {
+        fun keyOfG() {
             val notes = listOf(G, B, D)
             val chord = ChordResolver().resolve(notes)
             assertMajor(chord, G)
         }
 
         @Test
-        fun resolveInkeyOfA() {
+        fun keyOfA() {
             val notes = listOf(A, C_SHARP, E)
             val chord = ChordResolver().resolve(notes)
             assertMajor(chord, A)
         }
 
         @Test
-        fun resolveInkeyOfB() {
+        fun keyOfB() {
             val notes = listOf(B, D_SHARP, F_SHARP)
             val chord = ChordResolver().resolve(notes)
             assertMajor(chord, B)
@@ -63,9 +66,10 @@ class MajorChordsTest {
     }
 
     @Nested
-    inner class MajorChordsFromKeyAndQuality {
+    @DisplayName("From key & quality")
+    inner class FromKeyAndQuality {
         @Test
-        fun resolveInkeyOfC() {
+        fun keyOfC() {
             val key = C
             val quality = MAJOR
             val notes = ChordResolver().resolve(key, quality)
@@ -73,7 +77,7 @@ class MajorChordsTest {
         }
 
         @Test
-        fun resolveInkeyOfD() {
+        fun keyOfD() {
             val key = D
             val quality = MAJOR
             val notes = ChordResolver().resolve(key, quality)
